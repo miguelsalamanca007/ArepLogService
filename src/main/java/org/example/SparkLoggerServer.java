@@ -9,6 +9,7 @@ public class SparkLoggerServer {
         port(getPort());
         get("logString", (req, res) -> {
             String value = req.queryParams("value");
+            System.out.println("Request Has Been Received");
             return "value";
         });
     }
