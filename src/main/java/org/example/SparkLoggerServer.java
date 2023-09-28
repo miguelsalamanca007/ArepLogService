@@ -25,7 +25,7 @@ public class SparkLoggerServer {
         get("logString", (req, res) -> {
             String value = req.queryParams("value");
             sendDocumentToDB(value);
-            System.out.println("Request Has Been Received");
+            System.out.println("Request Has Been Received and the value is:" + value);
             Gson gson = new Gson();
             return gson.toJson(getLast10Strings());
         });
